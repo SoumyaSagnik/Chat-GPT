@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="landing-animation">
+    <lottie-player src="./assets/Landing.json" background="transparent" speed="1"
+      style="width: 22.5rem; height: 37.5rem;" loop autoplay></lottie-player>
+  </div>
+  <div id="progressbar"></div>
+  <div id="app">
+    <div class="chat_container"></div>
+    <form>
+      <textarea name="prompt" cols="1" rows="1" placeholder="Ask me anything..."></textarea>
+      <button type="submit"><lottie-player src="./assets/send2.json" background="transparent" speed="1"
+          style="width: 2.25rem; height: 2rem;" loop autoplay></lottie-player></button>
+    </form>
+  </div>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script type="module" src="script.js"></script>
+</body>
+
+</html>
