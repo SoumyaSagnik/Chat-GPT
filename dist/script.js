@@ -65,7 +65,7 @@ const handleSubmit = async (e) => {
   const messageDiv = document.getElementById(id);
   loader(messageDiv);
 
-  const response = await fetch("http://localhost:5000", {
+  const response = await fetch("https://soumya-khanda-modern-ai.netlify.app/", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
