@@ -1,9 +1,11 @@
 import bot from "./assets/bot.svg";
 import user from "./assets/user.svg";
+import lottieWeb from "https://cdn.skypack.dev/lottie-web";
 
 const form = document.querySelector("form");
 const chatContainer = document.querySelector(".chat_container");
 const landingAnimation = document.querySelector(".landing-animation");
+const sendButton = document.querySelector("button");
 
 let loadInterval;
 
@@ -49,9 +51,13 @@ function chatStripe(isAi, value, id) {
 }
 
 const handleSubmit = async (e) => {
-  landingAnimation.remove();
   e.preventDefault();
   const data = new FormData(form);
+
+  const q = document.querySelector("textarea").value;
+  if (q.trim() === "") return;
+
+  landingAnimation.remove();
 
   // user
   chatContainer.innerHTML += chatStripe(false, data.get("prompt"));
@@ -94,3 +100,23 @@ form.addEventListener("submit", handleSubmit);
 form.addEventListener("keyup", (e) => {
   if (e.keyCode === 13) handleSubmit(e);
 });
+
+var animationData = lottieWeb.loadAnimation({
+  container: landingAnimation,
+  path: "./assets/Landing.json",
+  renderer: "svg",
+  loop: true,
+  autplay: true,
+});
+
+animationData.goToAndStop(14, true);
+
+var sendAnimation = lottieWeb.loadAnimation({
+  container: sendButton,
+  path: "./assets/send2.json",
+  renderer: "svg",
+  loop: true,
+  autplay: true,
+});
+
+sendAnimation.goToAndStop(14, true);
