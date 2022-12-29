@@ -65,7 +65,7 @@ const handleSubmit = async (e) => {
   const messageDiv = document.getElementById(id);
   loader(messageDiv);
 
-  const response = await fetch("https://soumya-khanda-modern-ai.netlify.app/", {
+  const response = await fetch("https://modern-ai.onrender.com/", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
