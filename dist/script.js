@@ -110,13 +110,3 @@ var animationData = lottieWeb.loadAnimation({
 });
 
 animationData.goToAndStop(14, true);
-
-var sendAnimation = lottieWeb.loadAnimation({
-  container: sendButton,
-  path: "https://assets3.lottiefiles.com/packages/lf20_7sg1ibsl.json",
-  renderer: "svg",
-  loop: true,
-  autplay: true,
-});
-
-sendAnimation.goToAndStop(14, true);
