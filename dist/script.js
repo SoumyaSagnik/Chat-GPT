@@ -103,7 +103,7 @@ form.addEventListener("keyup", (e) => {
 
 var animationData = lottieWeb.loadAnimation({
   container: landingAnimation,
-  path: "./assets/Landing.json",
+  path: "https://assets5.lottiefiles.com/packages/lf20_96bovdur.json",
   renderer: "svg",
   loop: true,
   autplay: true,
