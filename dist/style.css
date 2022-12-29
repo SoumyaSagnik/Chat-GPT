@@ -103,11 +103,13 @@ form {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 10px;
+  padding: .5rem;
+  padding-bottom: 0;
   background: #40414F;
   display: flex;
   flex-direction: row;
   gap: .5rem;
+  scale: 0.8;
 }
 
 textarea {
@@ -127,11 +129,7 @@ button {
   border: 0;
   cursor: pointer;
   background: transparent;
-}
-
-form img {
-  width: 30px;
-  height: 30px;
+  scale: 0.8;
 }
 
 ::-webkit-scrollbar {
